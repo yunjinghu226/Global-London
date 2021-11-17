@@ -1,0 +1,274 @@
+/* COVER PAGE */
+
+.section1 {
+}
+
+.title {
+  left: 900px;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #595959;
+  font-weight: bold;
+  position: absolute;
+  font-family: "Lucida Console", Monaco, monospace
+}
+
+/* typing effect */
+
+.title p {
+  border-right: .15em solid rgba(29,166,204);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.title p:nth-child(1) {
+  width: 3.3em;
+  -webkit-animation: type 1.5s steps(10, end);
+  animation: type 1.5s steps(10, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.title p:nth-child(2) {
+  width: 3.3em;
+  opacity: 0;
+  -webkit-animation: type2 1.5s steps(10, end);
+  animation: type2 1.5s steps(10, end);
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.title p:nth-child(3) {
+  width: 9em;
+  opacity: 0;
+  -webkit-animation: type3 1.5s steps(40, end), blink .5s step-end infinite alternate;
+  animation: type3 1.5s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid rgba(29,166,204);
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid rgba(29,166,204);
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid rgba(29,166,204);
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid rgba(29,166,204);
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
+}
+
+#coverpic {
+  position: absolute;
+  top:-150px;
+  left:-350px;
+  width: 1200px;
+  height: 1200px;
+}
+
+#pulsating {
+    position: absolute;
+    top:350px;
+    left:150px;
+    background-color: #B83735;
+    -webkit-border-radius: 30px;
+    height: 60px;
+    width: 60px;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 1.0
+}
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+/* TABLE OF CONTENTS */
+
+.section2 {
+  background-image: url("pictures/contentback.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  font-family: Helvetica, 'Open Sans', sans-serif;
+  color: #595959;
+  width: 100%;
+}
+
+.items {
+  position:absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width:1200px;
+  z-index:2;
+  text-align: center;
+  top:325px;
+  left:100px;
+}
+
+.item1, .item2, .item3, .item4 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* MAP PAGE SETTINGS */
+
+#menu {
+    position: absolute;
+    top: 10%;
+    left: 5px;
+    width: 2vw;
+    z-index: 70;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: block;
+    float: left;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 0.75vw;
+    margin:2px;
+}
+
+#menu li img {
+    width: 2vw;
+    position: relative;
+    top: 10%;
+    left: 15%;
+}
+
+#menu li:hover {
+    margin:8px;
+    cursor: pointer;
+}
+
+#menu li.active {
+  margin: 8px;
+}
+
+
+.titleblock {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  padding: 8px 8px 8px 8px;
+  border-radius: 5px;
+  background-color: rgba(29,166,204,0.5);
+  color: #fff;
+  font-family: Helvetica, 'Open Sans', sans-serif;
+}
+
+h3 {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 12px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+/*about page*/
+
+.section7 {
+  background-color: rgba(29,166,204);
+  font-family: Helvetica, 'Open Sans', sans-serif;
+}
+
+#aboutText {
+    position: ;
+    text-align: center;
+    color:#fff;
+    margin: auto;
+    left: 40%;
+}
