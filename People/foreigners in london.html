@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Foreign workers in London</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+  <link href="style_feixu.css" rel='stylesheet'/>
+</head>   
+<body>
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js' charset='utf-8'></script>  
+<!--choose nationality-->     
+<nav id="menu"><h4>Zoom out to display nationality data</h4></nav>
+<div id='map'></div>
+    
+<!--slider and legend 1-->    
+<div class='map-overlay top'>
+    <div class='map-overlay-inner'>
+        <label id='year'>2012&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2013&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2014&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016</label>
+        <input id='slider' type='range' min='2012' max='2016' step='1' value='0' />
+    </div>
+
+    <div class='map-overlay-inner'>
+        <div id='legend' class='legend'>
+        <div class='bar'>From less to more</div>
+        <div>Population</div>
+        </div>
+            <label id='input2'></label>
+    </div>   
+</div>
+ 
+<!--choose borough-->  
+<div class='map-overlay2'>
+    <div class='map-overlay-inner2'>
+    <h3>Zoom in to dispaly borough job data</h3> 
+    <button id='Reset'>Reset perspective</button> 
+<table>
+    <tr>
+        <th> <button id='Newham'>Newham</button></th>
+        <th><button id='Brent'>Brent</button></th>
+        <th><button id='CityofLondon'>City of London</button></th>
+    </tr>
+    <tr>
+        <th> <button id='HammersmithandFulham'>Hammersmith and Fulham</button></th>
+        <th><button id='Haringey'>Haringey</button></th>
+        <th><button id='Merton'>Merton</button></th>
+    </tr>
+     </table>
+</div>
+</div>
+    
+<!--LEGEND2-->
+<h3><div class='map-overlay3' id ='legend2-title'>Most Popular Careers</div></h3>
+<h4><div class='map-overlay3' id='legend2'></div></h4>
+
+<!--pie chart-->
+<div class='chart'><canvas id='pie' height=160px></canvas>
+    </div>
+
+<!-- Your script -->
+  <script src="script_feixu.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <!--META & TITLE-->
+  <meta charset="utf-8">
+  <title>Global London</title>
+  <!--Favicon-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+</head>
+<body>
+
+  <!--NAVIGATION TABS-->
+  <ul id="menu">
+      <li data-menuanchor="page1" class='active'><a href="#page1" title="Welcome"><img src="pictures/home.png"></a></li>
+      <li data-menuanchor="page2"><a href="#page2" title="Guide"><img src="pictures/toc.png"></a></li>
+      <li data-menuanchor="page3"><a href="#page3" title="Flight"><img src="pictures/airport.png"></a></li>
+      <li data-menuanchor="page4"><a href="#page4" title="Residents"><img src="pictures/people.png"></a></li>
+      <li data-menuanchor="page5"><a href="#page5" title="Restaurants"><img src="pictures/food.png"></a></li>
+      <li data-menuanchor="page6"><a href="#page6" title="Brands"><img src="pictures/shopping.png"></a></li>
+      <li data-menuanchor="page7"><a href="#page7" title="About"><img src="pictures/info.png"></a></li>
+  </ul>
+
+
+<div id="fullpage">
+  <!--COVER PAGE-->
+  <div class='section section1'>
+    <img src='pictures/coverpic.png' alt='earth' id='coverpic'>
+    <img src='' id='info'>
+    <div class='title'>
+      <p style="font-size:126px;">HELLO</p>
+      <p style="font-size:126px;">WOLRD</p>
+      <p style="font-size:44px;">FROM LONDONERS</p>
+    </div>
+    <a href='#page2' id="pulsating" title="Fly to London now!"></a>
+  </div>
+
+  <!--TABLE OF CONTENTS-->
+  <div class='section section2'>
+    <div style='position:absolute;z-index:1;height:36px;width:100%;top:400px;background-color:rgba(29,166,204)'></div>
+    <div class=items>
+      <div class='item1'>
+        <a href='#page3'><img src='pictures/airport.png' alt='airport' style='height:172px;weight:172px;padding:10px;'></a>
+        <h3>WORLDWIDE<br>CONNECTION</h3>
+      </div>
+      <div class='item2'>
+        <a href='#page4'><img src='pictures/people.png' alt='people' style='height:172px;weight:172px;padding:10px;'></a>
+        <h3>COSMOPOLITAN<br>COMMUNITY</h3>
+      </div>
+      <div class='item3'>
+        <a href='#page5'><img src='pictures/food.png' alt='food' style='height:172px;weight:172px;padding:10px;'></a>
+        <h3>GLOBAL<br>FOODCOURT</h3>
+      </div>
+      <div class='item4'>
+        <a href='#page6'><img src='pictures/shopping.png' alt='shopping' style='height:172px;weight:172px;padding:10px;'></a>
+        <h3>INTERNATIONAL<br>SHOPPING CENTRE</h3>
+      </div>
+    </div>
+  </div>
+
+  <!--PAGE 3-->
+  <div class="section section3">
+
+    <!--TITLE-->
+    <div class="titleblock">
+      <h3>Flights Connecting London to the World</h3>
+      <p>Data source: <a href="https://www.caa.co.uk/Data-and-analysis/UK-aviation-market/Airports/Datasets/UK-airport-data/">Civil Aviation Authority</a> & <a href='https://www.flightradar24.com/data/airports/'>Flight Radar 24</a></p>
+    </div>
+
+    <!--MAP-->
+    <iframe id="flight" src="Flight/Index_Bowen_2.html" height="100%" width="100%" frameBorder="0"></iframe>
+  </div>
+
+  <!--PAGE 4-->
+  <div class="section section4">
+
+    <!--TITLE-->
+    <div class="titleblock">
+      <h3>Foreign Employees in London</h3>
+      <p>Data source: <a href="https://stat-xplore.dwp.gov.uk/">Gov.uk</a></p>
+    </div>
+
+    <!--MAP-->
+    <iframe id="people" src="People/foreigners in london.html" height="100%" width="100%" frameBorder="0"></iframe>
+  </div>
+
+  <!--PAGE 5-->
+  <div class="section section5">
+
+    <!--TITLE-->
+    <div class="titleblock">
+      <h3>Global Cuisines in London</h3>
+      <p>Data source: <a href="https://www.yelp.com/developers/documentation/v3/business">Yelp Fusion API</a></p>
+      <p>Related Data Analysis Project: <a href="https://github.com/yunjinghu226/LondonFoodervisty">London Foodervisty</a></p>
+    </div>
+
+    <!--MAP-->
+    <iframe id="yelp" src="Yelp/restaurants_webpage.html" height="100%" width="100%" frameBorder="0" scrolling="no"></iframe>
+  </div>
+
+  <!--PAGE 6-->
+  <div class="section section6">
+
+    <!--TITLE-->
+    <div class="titleblock">
+      <h3>Shopping around the world on Oxford St.</h3>
+      <p>Data source: <a href="https://en.wikipedia.org/wiki/List_of_clothing_and_footwear_shops_in_the_United_Kingdom">Wikipedia</a> and Official website of brands</p>
+    </div>
+
+    <!--MAP-->
+    <iframe id="shopping" src="Shopping/london_brands.html" height="100%" width="100%" frameBorder="0"></iframe>
+  </div>
+
+  <!--PAGE 6-->
+  <div class="section section7">
+    <div id="aboutText">
+        <h3>Global London</h3>
+        <br/>
+
+        <p>
+            <br/>Creators : Bowen Zhang, Chia-Yin Lu, Fei Xu, Yunjing Hu
+            <br/>Map engine : <a href="https://www.mapbox.com/" target="_blank">Mapbox GL JS</a>
+            <br/>Gitee : <a href="https://gitee.com/huyunjing/global_london" target="_blank">@Global_London</a>
+            <br/>Gitub : <a href="https://github.com/HelloWorld-fromLondoners/HelloWorld-fromLondoners.github.io" target="_blank">@Global_London</a>
+            <br/>
+            <br/>@ 2019 CASA, University College London</p>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="fullpage.js"></script>
+<!-- <script type="text/javascript" src="examples.js"></script> -->
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6','page7'],
+        menu: '#menu',
+        lazyLoad: true
+    });
+</script>
+
+</body>
+</html>
